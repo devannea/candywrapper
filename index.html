@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+    <title>Candy Wrapper</title>
+</head>
+<body>
+    <header>
+        <img src="./images/thecandywrapper.png" class="logo" alt="The Candy Wrapper">    
+        <nav>
+            <!-- do I even need the navigation bar?? -->
+        </nav>
+    </header>
+    <div class="middle-of-page">
+        <!-- idk what to put here yet :/ -->
+        <p>Visit us at the South Plains Mall<br>Located at 6002 Slide Rd, Lubbock, TX 79414</p>
+        <div id="map"></div>
+        <p>Call us at (806)791-5459<br>Or email us at candywrapperlubbock@gmail.com<br>We'd love to hear your feedback!</p>
+        <script>
+            function initMap() {
+                var options = {
+                    zoom: 20,
+                    center:{lat: 33.539, lng: -101.925}
+                }
+                var map = new google.maps.Map(
+                    document.getElementById('map'), options);
+                var marker = new google.maps.Marker({
+                    position: options,
+                    map: map
+                });
+            }
+        </script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAghv_nc552rkGtYsa_X1bpxu0RONR3fFU&callback=initMap">
+        </script>
+    </div>
+    <footer>
+        <div class="social-media">
+            <a href="http://www.facebook.com/thecandywrapper"><img src="./images/Facebook.png" class="social-media-logos" alt="Facebook"></a>
+            <a href="http://www.twitter.com/candywrapperlbk"><img src="./images/Twitter.png" class="social-media-logos" alt="Twitter"></a>
+            <a href="https://www.pinterest.com/candywrapperlbk"><img src="./images/Pinterest.png" class="social-media-logos" alt="Pinterest"></a>
+        </div>
+    </footer>
+</body>
+</html>
