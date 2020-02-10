@@ -16,23 +16,31 @@
         </nav>
     </header>
     <div class="middle-of-page">
-        <!-- idk what to put here yet :/ -->
+        <p>We are wishing you a sweet Valentine's Day!<br>From all your friends at The Candy Wrapper!</p>
+        <img src="./images/cW03.jpg" alt="Baskets" class="inside">
+        <img src="./images/cW02.jpg" alt="Candy Bins" class="inside">
+        <img src="./images/cW06.jpg" alt="Jelly Bellies" class="inside">
+        <img src="./images/cW04.jpg" alt="Display" class="inside">
+        <img src="./images/cW05.jpg" alt="Poppy's" class="inside">
         <p>Visit us at the South Plains Mall<br>Located at 6002 Slide Rd, Lubbock, TX 79414</p>
+        <img src="./images/cW01.jpeg" alt="Candy Wrapper" class="front-view">
         <div id="map"></div>
         <p>Call us at (806)791-5459<br>Or email us at candywrapperlubbock@gmail.com<br>We'd love to hear your feedback!</p>
         <script>
             function initMap() {
-                var options = {
-                    zoom: 20,
-                    center:{lat: 33.539, lng: -101.925}
-                }
-                var map = new google.maps.Map(
-                    document.getElementById('map'), options);
-                var marker = new google.maps.Marker({
-                    position: options,
-                    map: map
+                var myLatLng = {lat: 33.539, lng: -101.925};
+
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 16,
+                    center: myLatLng
                 });
-            }
+
+                var marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    title: "Candy Wrapper"
+                });
+            }           
         </script>
         <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAghv_nc552rkGtYsa_X1bpxu0RONR3fFU&callback=initMap">
