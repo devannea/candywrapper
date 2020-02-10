@@ -66,3 +66,32 @@ footer {
 .social-media-logos {
     width: 75%;
 }
+@media (max-width: 450px) {
+    .logo {
+        width: 50%;
+    }
+    .middle-of-page {
+        margin: 5%;
+        border-radius: 25px;
+        padding: 5%;
+        text-align: center;
+    }
+    .inside {
+        width: 80%;
+        margin-bottom: 5%;
+        border-radius: 25px;
+    }
+    .front-view {
+        width: 80%;
+        margin-bottom: 5%;
+        border-radius: 25px;
+    }
+    #map {
+        height: 250px;
+        width: 80%;
+        border-radius: 25px;
+    }
+    .social-media {
+        width: 45%;
+    }
+}
